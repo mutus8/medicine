@@ -18,12 +18,15 @@ jobs:
           node-version: 20
 
       - name: Build Angular app to prod
+<<<<<<< HEAD
         
+=======
+>>>>>>> 0b277c86ee7e9771565c1a938a7994f9aee6cf0e
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: medicine/dist/browser
+          folder: /dist/browser
           branch: prod  
           token: ${{ secrets.GH_TOKEN }}

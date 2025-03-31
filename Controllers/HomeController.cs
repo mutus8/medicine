@@ -1,12 +1,14 @@
 using System.Diagnostics;
-using medicine.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using proyecto.Models;
 
-namespace medicine.Controllers
+namespace proyecto.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -18,6 +20,7 @@ namespace medicine.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

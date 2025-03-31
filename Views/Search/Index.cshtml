@@ -1,0 +1,17 @@
+﻿@using proyecto.ViewModels.Search
+@model SearchViewModel;
+@{
+    ViewData["Title"] = "Advance search";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-controller="Search" asp-action="List" method="get">
+        <div class="input-group input-group-lg mb-3">
+            <label class="form-label"></label>
+            <input asp-for="Param" class="form-control" />
+            <input type="submit" value="Search" class="btn btn-outline-secondary" />
+        </div>
+    </form>
+
+</div>

@@ -1,4 +1,4 @@
-namespace medicine.Models
+namespace proyecto.Models
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<proyecto.Models.Medicine.MedicineModel>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Medicine list</h1>
+
+<p>
+    <a asp-action="Index">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nregistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.labtitular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpresc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nregistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.labtitular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpresc)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
